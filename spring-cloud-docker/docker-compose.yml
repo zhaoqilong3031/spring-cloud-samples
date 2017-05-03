@@ -1,0 +1,20 @@
+version: '2' 
+services:
+  registry:
+    image: springcloud/registry
+    environment:
+      REGISTRY_EUREKA_URL: http://registry:7070/eureka
+    ports:
+      - 7070:7070
+
+  config:
+    image: springcloud/config
+    environment:
+      REGISTRY_EUREKA_URL: http://registry:7070/eureka
+    ports:
+      - 7071:7071
+    links:
+      - registry:registry
+
+ 
+
