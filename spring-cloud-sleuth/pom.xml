@@ -18,7 +18,7 @@
 	<!-- properties -->
 	 
 	<modules>
-		<module>zipkin-server</module>
+		<module>sleuth-server</module>
 		<module>api</module>
 		<module>spi</module>
 		
