@@ -17,7 +17,7 @@
 			<url>scp://webhost.company.com/www/website</url>
 		</site>
 	</distributionManagement>
-	<!-- properties -->
+	<!-- properties2 -->
 	<properties>
 		<docker.image.prefix>springcloud</docker.image.prefix>
 		<main.basedir>${basedir}/../..</main.basedir>
