@@ -27,9 +27,12 @@ import org.springframework.boot.logging.logback.LevelRemappingAppender;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.integration.annotation.MessageEndpoint;
-import org.springframework.integration.annotation.ServiceActivator;
+import org.springframework.core.env.ConfigurableEnvironment;
+
+import com.aliyun.openservices.log.producer.ProjectConfig;
+import com.zhaoql.api.domain.TestDo;
 
 @EnableEurekaClient
 @EnableHystrix
@@ -48,5 +51,13 @@ public class ApiApplication extends SpringBootServletInitializer {
 	public static void main(String[] args) throws Exception {
 		LevelRemappingAppender a;
 		SpringApplication.run(ApiApplication.class, args);
+		 
+	}
+	
+	@Bean
+	public TestDo aa(ConfigurableEnvironment environment){
+		environment.getProperty("aliyun.log", ProjectConfig.class);
+		environment.setPlaceholderPrefix("aliyun.log");
+		return null;
 	}
 }

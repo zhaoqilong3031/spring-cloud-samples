@@ -33,8 +33,8 @@
 		  <projectName>test-zhaoql</projectName>
 		  <logstore>test</logstore>
 		  <endpoint>cn-hangzhou.log.aliyuncs.com</endpoint>
-		  <accessKeyId>XXX</accessKeyId>
-		  <accessKey>XXXX</accessKey>
+		  <accessKeyId>AdhNiCkF2UhppMZG</accessKeyId>
+		  <accessKey>NWa0sKrnYJwGc4ByfFz1kJJ6aEQIDw</accessKey>
 	</appender>
 
 	<!-- 日志输出级别 -->

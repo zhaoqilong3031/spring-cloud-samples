@@ -16,12 +16,12 @@
 
 package com.zhaoql.zipkin.boot;
 
-import org.jooq.tools.LoggerListener;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.sleuth.log.SleuthLogAutoConfiguration;
 import org.springframework.cloud.sleuth.zipkin.stream.EnableZipkinStreamServer;
+import org.springframework.cloud.stream.binding.StreamListenerErrorMessages;
+import org.springframework.integration.channel.DirectChannel;
 
 @SpringBootApplication
 @EnableEurekaClient
@@ -30,7 +30,12 @@ public class ZipkinApplication {
 
 	public static void main(String[] args) {
 //		LoggerListener
+//		AppInfoParser
+//		AbstractCoordinator
 //		SleuthLogAutoConfiguration
+//		DirectChannel
+//		StreamListenerErrorMessages
+//		essageListenerContainer
 		SpringApplication.run(ZipkinApplication.class, args);
 	}
 }
